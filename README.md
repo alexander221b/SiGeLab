@@ -1,7 +1,7 @@
 # SiGeLab
 PROTOTIPO DE SISTEMA DE REGISTRO DE DATOS Y GENERACIÓN DE INFORMES DEL LABORATORIO DE AGUAS Y ALIMENTOS DE LA UNIVERSIDAD TECNOLÓGICA DE PEREIRA
 
-- Se ha hecho uso del entorno de desarrollo WAMPSERVER 5.5.12, el framework php CODEIGNITER y el framework front-end BOOTSTRAP. Como navegador predeterminado se usó GOOGLE CHROME.
+- Se a hecho uso del entorno de desarrollo WAMPSERVER 5.5.12, el framework php CODEIGNITER y el framework front-end BOOTSTRAP. Como navegador predeterminado se usó GOOGLE CHROME.
 
 - Para el funcionanmiento del envío de contraseña en caso de pérdida se usó Sendmail.
 - Copiar la carpeta sendmail dentro del wamp.
