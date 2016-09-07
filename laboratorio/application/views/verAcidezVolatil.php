@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>&nbsp;</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="\laboratorio\css\bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  
+<style type="text/css">
+  table, th, td {
+    padding-top: 2px;     
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .margenGuia { 
+  border: black 0px solid; 
+  margin-left: 0px; 
+  margin-right: 0px; 
+  width: 900px; 
+}
+</style>
+
+<!-- Margen guía -->
+<div class="margenGuia"> 
+
+  <div>
+  <table border="1" style="width: 310px; color:black ">
+    <tr>
+      <th style="border:solid black 1.5pt; padding-top: 0px; padding-bottom: 0px; font-size:10.0pt"><strong> &nbsp Laboratorio:</strong></th>
+      <th style="border:solid black 1.5pt; padding-top: 0px; padding-bottom: 0px; font-size:10.0pt"><strong>&nbsp Análisis de Aguas y Alimentos</strong>  </th>
+    </tr>
+  </table>
+</div><br><br><br>
+
+<div style="font-size:11.0pt; text-align:center">
+  <b>
+    Fecha de Recepción:  <?php
+                     foreach($acidezVolatil->result() as $row){
+                       $fechaRecepcion = $row->fechaRecepcion;
+                      } echo $fechaRecepcion?>
+    &nbsp&nbsp&nbsp 
+    Código Interno: <?php
+                     foreach($acidezVolatil->result() as $row){
+                       $codigoInterno = $row->codigoInterno;
+                      } echo $codigoInterno?>
+
+  </b>
+</div><br><br>
+
+<div style="font-size:12.0pt;"> &nbsp&nbsp&nbsp <b>Acidéz Volátil: </b></div>
+
+  <table border="1">
+              <thead>
+                <tr style="background-color: #D9D9D9; width: 720px; text-align: center; font-size:10.0pt">
+                  <th><div style="width: 91px;">Fecha del Ensayo</div></th>
+                  <th><div style="width: 91px;">Código de Muestra</div></th>
+                  <th><div style="width: 91px;">V (mL) de muestra</th>
+                  <th><div style="width: 91px;">V (mL) NaOH</th>
+                  <th><div style="width: 91px;">N (Eq./L) NaOH</th>
+                  <th><div style="width: 91px;">Acidez Volátil (g. Ác. Acético/dm<sup>3</sup>)</th>
+                  <th><div style="width: 91px;">Acidez Fija (g. Ác. Tartárico/dm<sup>3</sup>)</th>
+                  <th><div style="width: 91px;">Promedio (g ácido predominante/ 100 g)</th>
+                  <th><div style="width: 91px;">Responsable</Acidez Fija (g. Ác. Tartárico/dm3) th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2"> <?php
+                     foreach($acidezVolatil->result() as $row){
+                       $fechaEnsayo = $row->fechaEnsayo;
+                      } echo $fechaEnsayo?></td>
+                  <td rowspan="2"><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $codigoMuestra = $row->codigoMuestra;
+                      } echo $codigoMuestra?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $vMuestra1 = $row->vMuestra1;
+                      } echo $vMuestra1?></td>                
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $vNaOh1 = $row->vNaOh1;
+                      } echo $vNaOh1?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $nNaOh1 = $row->nNaOh1;
+                      } echo $nNaOh1?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $acidezVolatil1 = $row->acidezVolatil1;
+                      } echo $acidezVolatil1?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $acidezFija1 = $row->acidezFija1;
+                      } echo $acidezFija1?></td>
+                  <td rowspan="2"><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $promedio = $row->promedio;
+                      } echo $promedio?></textarea></td>
+                  <td rowspan="2"><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $responsable = $row->responsable;
+                      } echo $responsable?></td>
+                </tr>
+                <tr>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $vMuestra2 = $row->vMuestra2;
+                      } echo $vMuestra2?></td>                  
+                  <td ><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $vNaOh2 = $row->vNaOh2;
+                      } echo $vNaOh2?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $nNaOh2 = $row->nNaOh2;
+                      } echo $nNaOh2?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $acidezVolatil2 = $row->acidezVolatil2;
+                      } echo $acidezVolatil2?></td>
+                  <td><?php
+                     foreach($acidezVolatil->result() as $row){
+                       $acidezFija2 = $row->acidezFija2;
+                      } echo $acidezFija2?></td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+</div> 
+<!-- Fin margen guía -->
+
+</body>
+</html>
